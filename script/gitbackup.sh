@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #config_folder=~/klipper_config
 config_folder=~/printer_data/config
 klipper_folder=~/klipper
@@ -37,9 +36,11 @@ push_config(){
   cd $config_folder
   git pull
   git add .
+  git branch -M main
   current_date=$(date +"%Y-%m-%d %T")
   git commit -m "Autocommit from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
-  git push -u origin master
+  git remote add origin git@github.com:brunofranrodrigues/VoronBackup.git
+  git push -u origin main
 }
 
 grab_version
