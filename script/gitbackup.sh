@@ -1,4 +1,6 @@
 #!/bin/bash
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+
 #config_folder=~/klipper_config
 config_folder=~/printer_data/config
 klipper_folder=~/klipper
